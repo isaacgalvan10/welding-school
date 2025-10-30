@@ -1,0 +1,25 @@
+name: Deploy on Merge to Main
+
+on:
+  push:
+    branches:
+      - main  # triggers when PR merges into main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18  # or your project’s version
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build or Deploy
+        run: npm run deploy
