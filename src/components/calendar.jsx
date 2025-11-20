@@ -20,26 +20,27 @@ const KoalendarWidget = () => {
 
       window.Koalendar("inline", {
         url: "https://koalendar.com/e/meet-with-isaac-galvan",
-        selector: "#inline-widget-meet-with-isaac-galvan",
+        selector: "#inline-widget",
       });
     };
 
     // 3️⃣ Optional cleanup if component unmounts
     return () => {
       const existingWidget = document.getElementById(
-        "inline-widget-meet-with-isaac-galvan"
+        "inline-widget"
       );
       if (existingWidget) existingWidget.innerHTML = "";
     };
   }, []);
 
   return (
-    <div className="relative flex justify-center items-center py-8">
-      <div
-        id="inline-widget-meet-with-isaac-galvan"
-        className="w-full max-w-2xl min-h-[600px]"
-      ></div>
+    
+  <div className="relative flex justify-center items-center py-8">
+    <div id="inline-widget" class="w-[393px]">
     </div>
+  </div>
+
+
   );
 };
 
