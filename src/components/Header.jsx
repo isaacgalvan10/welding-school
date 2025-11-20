@@ -1,11 +1,6 @@
-
+import HeaderButton from "./HeaderButton"
 export default function Header() {
-    return <header className='flex justify-between'>
-            <p>logo</p>
-            <li className="flex justify-between gap-3">
-                <a><ul>Home</ul></a>
-                <a><ul>About</ul></a>
-                <a><ul>Scheduling</ul></a>
-            </li>
+    return <header className='flex justify-between container mx-auto relative z-100 text-white mb-[-24px]'>
+            <p>Oscar Welding Practice</p>
         </header>
 }
